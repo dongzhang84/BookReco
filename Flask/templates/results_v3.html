@@ -1,103 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="BookAlike: Find reviews from like-minded readers.">
-    <meta name="author" content="Dong Zhang">
+<!doctype html>
+<html>
+
+<head>
+   
+   <meta charset="utf-8">
     <link rel="icon" href="../../favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/starter-template/">
 
-    <title> BookReco </title>
+    <title>BookReco</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Custom styles for this template -->
-    <link href="../static/starter-template.css" rel="stylesheet">
+    <link href="../static/css/starter-template.css" rel="stylesheet">
 
-
+    
   </head>
 
-  <body style="background-color:powderblue;">
+  <body>
 
-    <!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
 
-            
-    
-    
-
-    <div class="container">
       <div class="starter-template">
-         <br></br>
-        <h2 style="text-align:center;"><i> Books For you!</i></h2>
-         <p class="lead">
+
+      <h3 style="text-align:left"><i>Top Five Books For You! </i></h3>
         
-         <table class = table table-condensed table-striped">
+        <p></p>
+      <table class = table">
         <tbody>
             <th></th>
-            <th> Titles </th>
-            <th> Ratings </th>
-            <th> Images </th>
+            <th> <h3> </h3> </th>
+            <th> <h3> </h3></th>
             
             <tr>
             <th></th>
-            <td scope="col"> {{title0}} </td>
-            <td scope="col"> {{rating0}} </td>
+            <h2><td scope="col"> {{title0}} </h2> </td>
             <td scope="col"> <img src="{{img0}}"> </td>
             </tr>
             
             <tr>
             <th></th>
-            <td scope="col"> {{title1}} </td>
-            <td scope="col"> {{rating1}} </td>
+            <h2><td scope="col"> {{title1}} </h2> </td>
             <td scope="col"> <img src="{{img1}}"> </td>
             </tr>
             
             <tr>
             <th></th>
-            <td scope="col"> {{title2}} </td>
-            <td scope="col"> {{rating2}} </td>
+            <h2><td scope="col"> {{title2}} </h2> </td>
             <td scope="col"> <img src="{{img2}}"> </td>
             </tr>
 
             <tr>
             <th></th>
-            <td scope="col"> {{title3}} </td>
-            <td scope="col"> {{rating3}} </td>
+            <h2><td scope="col"> {{title3}} </h2> </td>
             <td scope="col"> <img src="{{img3}}"> </td>
             </tr>
 
             <tr>
             <th></th>
-            <td scope="col"> {{title4}} </td>
-            <td scope="col"> {{rating4}} </td>
+            <h2><td scope="col"> {{title4}} </h2> </td>
             <td scope="col"> <img src="{{img4}}"> </td>
             </tr>
                
             
         </tbody>
     </table>  
-        
-        
-        
-        
-        </p>
-      </div>
+
+    </div>
       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="static/js/bootstrap.min.js"></script>
-     </div><!-- /.container -->
-
-
-
-
-
-
-
-
+   
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -107,5 +79,6 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+
+   </body>
 </html>

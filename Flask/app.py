@@ -30,22 +30,24 @@ def index():
 
 		recommender = query_similar_books(message,10)
 		titles = []
+		ratings = []
 		imgs = []
 
 		for i in range (0,len(recommender)):
 			titles.append(recommender.index[i][1])
-			imgs.append(recommender.index[i][2])
+			ratings.append(recommender.index[i][2])
+			imgs.append(recommender.index[i][3])
 			#print(name)
 			#print(imgs)
 
 		print(imgs)
 
 		return render_template('results.html',
-			title0 = titles[0], img0 = imgs[0],
-			title1 = titles[1], img1 = imgs[1],
-			title2 = titles[2], img2 = imgs[2],
-			title3 = titles[3], img3 = imgs[3],
-			title4 = titles[4], img4 = imgs[4])
+			title0 = titles[0], rating0 = ratings[0], img0 = imgs[0],
+			title1 = titles[1], rating1 = ratings[1], img1 = imgs[1],
+			title2 = titles[2], rating2 = ratings[2], img2 = imgs[2],
+			title3 = titles[3], rating3 = ratings[3], img3 = imgs[3],
+			title4 = titles[4], rating4 = ratings[4], img4 = imgs[4])
 
 		selectedfile = ""
 
@@ -53,5 +55,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8000', debug=True)
+    app.run(host='0.0.0.0',port=80)
 

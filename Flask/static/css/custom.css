@@ -76,7 +76,12 @@ flex-wrap: nowrap;
 }
 
 .input {
-	color: white;
+	color: black;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .icon {
@@ -93,7 +98,7 @@ body {
 
 body::after {
 	content: "";
-	background: url("bkgd.jpg");
+	background: url("bkgd1.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.4;
@@ -129,7 +134,7 @@ input {
   font-size: 1.0em;
   font-family: "Verdana";
   background: transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 1.2px solid black;
 }
 
 hr {
