@@ -31,8 +31,8 @@ from scipy import sparse
 
 warnings.filterwarnings('ignore')
 
-#path_model  = '/Users/dong/Insight/Goodreads/models/'
-path_model  = '/home/ec2-user/Goodreads/models/'
+path_model  = '/Users/dong/Insight/Goodreads/models/'
+#path_model  = '/home/ec2-user/Goodreads/models/'
 
 dv = Doc2Vec.load(path_model+"doc2vec_model")
 tf = pickle.load(open(path_model+"tfidf_model.pkl", "rb"))
@@ -78,7 +78,7 @@ def get_ensemble_similarity_scores(message):
     
     ensemble_similarity = pd.merge(semantic_similarity, bow_similarity, left_index=True, right_index=True)
     ensemble_similarity.columns = ["semantic_similarity", "bow_similarity"]
-    ensemble_similarity['ensemble_similarity'] = (ensemble_similarity["semantic_similarity"]                                                   + ensemble_similarity["bow_similarity"])/2
+    ensemble_similarity['ensemble_similarity'] = np.sqrt(ensemble_similarity["semantic_similarity"] * ensemble_similarity["bow_similarity"])
     ensemble_similarity.sort_values(by="ensemble_similarity", ascending=False, inplace=True)
     return ensemble_similarity
 
